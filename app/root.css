@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    font-family: 'Lato', '-apple-system', sans-serif;
+    @apply m-0 p-0;
+  }
+
+  html, body {
+    overscroll-behavior-y: none;
+    @apply w-full;
+  }
+
+  html {
+    @apply h-auto;
+  }
+
+  body {
+    @apply min-h-screen flex flex-col;
+  }
+
+  main {
+    @apply flex-grow;
+  }
+}
+
+@layer components {
+  .crate {
+    @apply px-4 py-4 base-max-min w-full mx-auto;
+  }
+}
+
+@layer utilities {
+  .abs-fill {
+    @apply absolute inset-0;
+  }
+
+  .abs-span-right {
+    @apply absolute inset-y-0 right-0;
+  }
+
+  .base-max-min {
+    @apply max-w-base min-w-base;
+  }
+
+  .f-row-cb {
+    @apply flex flex-row items-center justify-between;
+  }
+
+  .f-row-cc {
+    @apply flex flex-row items-center justify-center;
+  }
+
+  .f-row-ce {
+    @apply flex flex-row items-center justify-end;
+  }
+
+  .f-row-cs {
+    @apply flex flex-row items-center justify-start;
+  }
+
+  .trans-300 {
+    @apply transition-all duration-300;
+  }
+
+  .trans-500 {
+    @apply transition-all duration-500;
+  }
+
+  .animate-wave {
+    animation: wave 1s ease-in-out infinite;
+  }
+
+  @keyframes wave {
+    0% {
+      transform: scale(1);
+    }
+    20% {
+      transform: scale(1, 2);
+    }
+    40% {
+      transform: scale(1);
+    }
+  }
+}

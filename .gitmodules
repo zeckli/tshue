@@ -1,0 +1,3 @@
+[submodule "vendor/chainlist"]
+	path = vendor/chainlist
+	url = https://github.com/cosmostation/chainlist.git
