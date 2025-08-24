@@ -1,9 +1,10 @@
 import js from '@eslint/js'
-import ts from 'typescript-eslint'
+import format from 'eslint-plugin-format'
 import prettierLint from 'eslint-plugin-prettier/recommended'
 import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import tailwindLint from 'eslint-plugin-tailwindcss'
+import ts from 'typescript-eslint'
 
 export default ts.config(
   js.configs.recommended,
@@ -40,6 +41,22 @@ export default ts.config(
       ],
       'tailwindcss/classnames-order': 'error',
       'tailwindcss/no-custom-classname': 'off',
+    },
+  },
+  {
+    files: ['app/**/*.svg'],
+    languageOptions: { parser: format.parserPlain },
+    plugins: { format },
+    rules: {
+      'prettier/prettier': 'off',
+      'format/prettier': [
+        'error',
+        {
+          parser: 'html',
+          printWidth: 100,
+          singleAttributePerLine: false,
+        },
+      ],
     },
   }
 )

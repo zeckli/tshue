@@ -14,11 +14,13 @@
   }
 
   html {
-    @apply h-auto;
+    background-image: url('assets/noise.svg');
+    @apply h-auto bg-sand-10 bg-repeat bg-blend-multiply;
   }
 
   body {
-    @apply min-h-screen flex flex-col;
+    background-image: url('assets/deco.svg');
+    @apply min-h-screen flex flex-col bg-fixed bg-top bg-no-repeat;
   }
 
   main {

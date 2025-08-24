@@ -1,5 +1,5 @@
 {
-  "name": "tshe",
+  "name": "tshue",
   "sideEffects": false,
   "type": "module",
   "engine": {
@@ -19,7 +19,6 @@
     "lodash-es": "^4.17.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tshe": "link:",
     "tsx": "^4.20.3"
   },
   "devDependencies": {
@@ -30,6 +29,7 @@
     "autoprefixer": "^10.4.21",
     "eslint": "^9.32.0",
     "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-format": "^1.0.1",
     "eslint-plugin-prettier": "^5.5.3",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
