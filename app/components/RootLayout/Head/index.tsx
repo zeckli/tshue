@@ -1,3 +1,4 @@
+import { Link } from '@remix-run/react'
 import clsx from 'clsx'
 import { memo } from 'react'
 
@@ -13,10 +14,10 @@ const Head = () => {
 
   return (
     <header className={baseCss}>
-      <div className={boxCss}>
+      <Link className={boxCss} to="/">
         <img className={logoCss} src={Logo} />
         <h1 className={nameCss}>tshue</h1>
-      </div>
+      </Link>
       <p className={descCss}>
         Rediscover forgotten assets in the&nbsp;
         <br className={breakCss} />
