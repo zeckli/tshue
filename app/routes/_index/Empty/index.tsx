@@ -4,13 +4,13 @@ import { DECO } from '@constants'
 
 const Empty = () => {
   const baseCss = clsx('f-row-cc relative text-center')
-  const descCss = clsx('mx-auto w-1/2 py-28 text-grey-40 md:py-32')
+  const descCss = clsx('mx-auto w-1/2 py-24 text-grey-40 md:py-32')
   const nameCss = clsx('text-orange-70')
   const imgCss = clsx('animate-float absolute opacity-60')
 
   const xsCss = 'w-[18px] h-[18px]'
   const smCss = 'w-[25px] h-[25px]'
-  const mdCss = 'size-[36px] md:size-[40px]'
+  const mdCss = 'size-[32px] md:size-[40px]'
 
   // left
   const bandCss = clsx(imgCss, xsCss, 'left-3 top-[calc(50%-80px)] md:left-4')
@@ -18,12 +18,12 @@ const Empty = () => {
   const strideCss = clsx(
     imgCss,
     smCss,
-    'left-20 top-[calc(50%-100px)] md:left-32'
+    'left-16 top-[calc(50%-100px)] md:left-32'
   )
   const evmosCss = clsx(
     imgCss,
     smCss,
-    'left-20 top-[calc(50%+50px)] md:left-32'
+    'left-16 top-[calc(50%+50px)] md:left-32'
   )
 
   // right
@@ -40,12 +40,12 @@ const Empty = () => {
   const akashCss = clsx(
     imgCss,
     smCss,
-    'right-20 top-[calc(50%-100px)] md:right-32'
+    'right-16 top-[calc(50%-100px)] md:right-32'
   )
   const celestiaCss = clsx(
     imgCss,
     smCss,
-    'right-20 top-[calc(50%+50px)] md:right-32'
+    'right-16 top-[calc(50%+50px)] md:right-32'
   )
 
   return (
