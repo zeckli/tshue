@@ -1,6 +1,6 @@
 import { Links, Scripts } from '@remix-run/react'
 
-const Doc = ({ children }: GeneralComponentType) => {
+const Doc = ({ children }: BasicComponentPropsType) => {
   return (
     <html lang="en">
       <head>

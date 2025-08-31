@@ -3,7 +3,7 @@ import Foot from './Foot'
 import Head from './Head'
 import Main from './Main'
 
-const RootLayout = ({ children }: BasicComponentType) => {
+const RootLayout = ({ children }: BasicComponentPropsType) => {
   return (
     <Doc>
       <Head />

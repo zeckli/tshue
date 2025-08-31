@@ -2,11 +2,11 @@ import clsx from 'clsx'
 
 import { DECO } from '@constants'
 
-const Page = () => {
+const Empty = () => {
   const baseCss = clsx('f-row-cc relative text-center')
   const descCss = clsx('mx-auto w-1/2 py-28 text-grey-40 md:py-32')
-  const emojiCss = clsx('text-6xl grayscale')
-  const imgCss = clsx('animate-float absolute opacity-60 grayscale')
+  const nameCss = clsx('text-orange-70')
+  const imgCss = clsx('animate-float absolute opacity-60')
 
   const xsCss = 'w-[18px] h-[18px]'
   const smCss = 'w-[25px] h-[25px]'
@@ -51,10 +51,8 @@ const Page = () => {
   return (
     <section className={baseCss}>
       <p className={descCss}>
-        Oh! Page Not Found.
-        <br />
-        <br />
-        <span className={emojiCss}>🫠</span>
+        <span className={nameCss}>tshue</span> uses public nodes to rediscover
+        assets, so it may take a few minutes to complete.
       </p>
 
       {/* left */}
@@ -104,4 +102,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default Empty

@@ -4,9 +4,9 @@ import { LOGOS, TOKENS } from '@constants'
 
 Decimal.set({ toExpNeg: -1000, toExpPos: 1000 })
 
-const formatIntPart = (s) => s.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+const formatIntPart = (s: string) => s.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 
-const formatFraction = (intPart, fracPart) => {
+const formatFraction = (intPart: string, fracPart: string) => {
   const pos = fracPart.search(/[^0]/)
   if (pos === -1) return intPart
 
@@ -15,7 +15,7 @@ const formatFraction = (intPart, fracPart) => {
   return f ? `${intPart}.${f}` : intPart
 }
 
-export const formatToken = (denom, amount) => {
+export const formatToken = (denom: string, amount: string) => {
   const { decimals, symbol } = TOKENS.get(denom) ?? {
     decimals: 6,
     symbol: denom,

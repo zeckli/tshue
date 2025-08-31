@@ -1,8 +1,8 @@
 import { chains } from 'chain-registry/mainnet'
 
-const chainCache = { chains: [] }
+const chainCache: { chains: Array<ChainType> } = { chains: [] }
 
-const transformChain = (source) => {
+const transformChain = (source: Record<string, Anything>) => {
   const {
     apis,
     bech32Prefix: prefix,
@@ -25,6 +25,6 @@ export const fetchChains = async () => {
     return chainCache.chains
   }
 
-  chainCache.chains = chains.map(transformChain).filter(Boolean)
+  chainCache.chains = chains.map(transformChain).filter((d) => d != null)
   return chainCache.chains
 }

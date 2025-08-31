@@ -10,12 +10,12 @@
 
   html, body {
     overscroll-behavior-y: none;
-    @apply w-full;
+    @apply w-full text-grey-90;
   }
 
   html {
-    background-image: url('assets/noise.svg');
-    @apply h-auto bg-sand-10 bg-repeat bg-blend-multiply;
+    background-image: url('assets/noise.png');
+    @apply h-auto bg-sand-20 bg-repeat bg-blend-multiply;
   }
 
   body {
@@ -84,6 +84,22 @@
     }
     40% {
       transform: scale(1);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-8px);
+    }
+    100% {
+      transform: translatey(0px);
     }
   }
 }
