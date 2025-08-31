@@ -4,13 +4,10 @@ import { join } from 'node:path'
 import { defineConfig } from 'vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
 
-const repo = '/tshue/'
-
 export default defineConfig({
-  base: repo,
+  base: '/',
   plugins: [
     remix({
-      basename: repo,
       ssr: false,
       buildEnd({ viteConfig }) {
         if (!viteConfig.isProduction) {
