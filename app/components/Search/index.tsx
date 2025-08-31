@@ -19,7 +19,7 @@ const Search = ({
   submit,
   abort,
 }: SearchPropsType) => {
-  const baseCss = clsx('relative h-12 w-full')
+  const baseCss = clsx('relative h-14 w-full')
   const controlCss = clsx(
     'abs-span-right f-row-cc z-10 rounded-xl bg-white px-2'
   )
