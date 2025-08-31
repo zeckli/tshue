@@ -13,7 +13,7 @@ export const links = () => {
 }
 
 export const clientLoader = async () => {
-  await delay(1500)
+  await delay(800)
   const chains = await fetchChains()
   return json({ chains })
 }
