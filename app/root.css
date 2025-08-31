@@ -10,15 +10,17 @@
 
   html, body {
     overscroll-behavior-y: none;
-    @apply w-full;
+    @apply w-full text-grey-90;
   }
 
   html {
-    @apply h-auto;
+    background-image: url('assets/noise.png');
+    @apply h-auto bg-sand-20 bg-repeat bg-blend-multiply;
   }
 
   body {
-    @apply min-h-screen flex flex-col;
+    background-image: url('assets/deco.svg');
+    @apply min-h-screen flex flex-col bg-fixed bg-top bg-no-repeat;
   }
 
   main {
@@ -82,6 +84,22 @@
     }
     40% {
       transform: scale(1);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-8px);
+    }
+    100% {
+      transform: translatey(0px);
     }
   }
 }
