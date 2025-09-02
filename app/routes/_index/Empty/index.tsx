@@ -4,7 +4,7 @@ import { DECO } from '@constants'
 
 const Empty = () => {
   const baseCss = clsx('f-row-cc relative text-center')
-  const descCss = clsx('mx-auto w-1/2 py-24 text-grey-40 md:py-32')
+  const descCss = clsx('mx-auto w-1/2 py-20 text-grey-40 md:py-32')
   const nameCss = clsx('text-orange-70')
   const imgCss = clsx('animate-float absolute opacity-60')
 
@@ -53,6 +53,8 @@ const Empty = () => {
       <p className={descCss}>
         <span className={nameCss}>tshue</span> uses public nodes to rediscover
         assets, so it may take a few minutes to complete.
+        <br />
+        <br />
       </p>
 
       {/* left */}
