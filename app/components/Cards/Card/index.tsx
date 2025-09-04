@@ -17,7 +17,7 @@ const Card = ({ data }: CardPropsType) => {
   const isIBC = (data?.denom ?? '').startsWith('ibc/')
 
   const baseCss = clsx(
-    'trans-300 grid grid-cols-2 gap-x-2 rounded-xl bg-white px-4 py-3 hover:scale-105 md:px-6'
+    'card-motion grid grid-cols-2 gap-x-2 rounded-xl bg-white px-4 py-3 md:px-6'
   )
   const infoCss = clsx('f-row-cs gap-x-3')
   const imageCss = clsx('size-10 rounded-full bg-orange-30')
