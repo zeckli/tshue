@@ -55,6 +55,8 @@ const Page = () => {
         <br />
         <br />
         <span className={emojiCss}>🫠</span>
+        <br />
+        <br />
       </p>
 
       {/* left */}
