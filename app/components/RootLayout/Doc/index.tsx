@@ -19,6 +19,21 @@ const Doc = ({ children }: BasicComponentPropsType) => {
           href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
           rel="stylesheet"
         />
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-QK9Z2DQFV2"
+        ></script>
+        <script
+          async
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-QK9Z2DQFV2');
+          `,
+          }}
+        />
         <Links />
       </head>
       <body>
