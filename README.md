@@ -1,6 +1,6 @@
 
 <p align="center">
-    <img width="40%" alt="tshue" src="media/tshue.png" />
+    <img width="30%" alt="tshue" src="media/tshue.png" />
 </p>
 
 <h4 align="center">
@@ -9,4 +9,7 @@
 
 <hr />
 
-tshue is a web app helps you to rediscover forgotten assets in the Cosmos ecosystem. It built with remix-run, tailwind and chain-registry. Try it on <a href="https://tshue.app" target="_blank">tshue.app</a>
+tshue is a web app that helps you to rediscover forgotten assets across the Cosmos ecosystem. It's built with Remix, Tailwind CSS, and the Cosmos chain-registry. Try it at <a href="https://tshue.app" target="_blank">tshue.app</a>
+
+<br/>
+<br/>
