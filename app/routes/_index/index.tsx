@@ -37,7 +37,7 @@ const Page = () => {
 
   const sortedItems = useMemo(
     () => orderBy(items, [order.field], [order.value]),
-    [items, order.value]
+    [items, order.field, order.value]
   )
 
   const submit = async () => {
