@@ -7,5 +7,5 @@
 </h4>
 
 <p align="center">
-    <img alt="tshue" src="media/tshue.png" />
+    <img width="50%" alt="tshue" src="media/tshue.png" />
 </p>
