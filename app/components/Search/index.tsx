@@ -21,7 +21,7 @@ const Search = ({
 }: SearchPropsType) => {
   const baseCss = clsx('relative h-14 w-full')
   const controlCss = clsx(
-    'abs-span-right f-row-cc z-10 rounded-xl bg-white px-2'
+    'abs-span-right f-row-cc z-10 rounded-xl bg-white px-4'
   )
   const buttonCss = clsx(
     'inline-grid grid-cols-1 grid-rows-1 place-items-center overflow-hidden'
