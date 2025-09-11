@@ -4,8 +4,6 @@ import Fallback from '@components/Fallback'
 import RootLayout from '@components/RootLayout'
 import { fetchChains } from '@services/chain'
 
-import { delay } from '@utils'
-
 import rootCss from './root.css?url'
 
 export const links = () => {
@@ -13,7 +11,6 @@ export const links = () => {
 }
 
 export const clientLoader = async () => {
-  await delay(800)
   const chains = await fetchChains()
   return json({ chains })
 }

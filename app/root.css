@@ -15,6 +15,12 @@
 
   html {
     background-image: url('assets/noise.png');
+
+    background-image: image-set(
+      url('/assets/noise.webp') type('image/webp') 1x,
+      url('/assets/noise.png') type('image/png') 1x
+    );
+
     @apply h-auto bg-sand-20 bg-repeat bg-blend-multiply;
   }
 
