@@ -10,7 +10,7 @@ const SearchInput = ({ address, setAddress, phase }: SearchInputPropsType) => {
   const isSearch = phase === 'search'
 
   const baseCss = clsx(
-    'abs-fill z-0 rounded-xl pl-4 pr-12 outline-none',
+    'abs-fill z-0 rounded-xl pl-5 pr-12 outline-none',
     'disabled:cursor-not-allowed disabled:bg-white disabled:opacity-100'
   )
 
