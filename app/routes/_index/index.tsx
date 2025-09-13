@@ -2,9 +2,8 @@ import { useRouteLoaderData } from '@remix-run/react'
 import clsx from 'clsx'
 import { motion } from 'framer-motion'
 import orderBy from 'lodash-es/orderBy'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react'
 
-import Cards from '@components/Cards'
 import Wave from '@components/Wave'
 import Search from '@components/Search'
 import Summary from '@components/Summary'
@@ -12,6 +11,8 @@ import { fetchBalances } from '@services/balance'
 import { decodeAddress } from '@utils'
 
 import Empty from './Empty'
+
+const Cards = lazy(() => import('@components/Cards'))
 
 type RootDataType = {
   chains: Array<ChainType>
@@ -142,7 +143,11 @@ const Page = () => {
         />
       )}
       {!isActed && <Empty />}
-      <Cards items={sortedItems} />
+      {sortedItems.length > 0 && (
+        <Suspense fallback={null}>
+          <Cards items={sortedItems} />
+        </Suspense>
+      )}
     </motion.section>
   )
 }
