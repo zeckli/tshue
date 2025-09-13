@@ -3,7 +3,7 @@ import { promises as fs } from 'fs'
 import path from 'path'
 
 const CHAINLIST_PATH = 'vendor/chainlist/chain'
-const TOKENS_FILE = 'app/constants/token.json'
+const TOKENS_FILE = 'public/data/token.json'
 
 const data = new Map()
 

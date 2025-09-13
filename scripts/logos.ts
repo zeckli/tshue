@@ -1,7 +1,7 @@
 import { assetLists } from 'chain-registry/mainnet'
 import { promises as fs } from 'fs'
 
-const LOGOS_FILE = 'app/constants/logo.json'
+const LOGOS_FILE = 'public/data/logo.json'
 
 const data = new Map()
 

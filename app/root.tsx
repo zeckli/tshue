@@ -3,6 +3,7 @@ import { json, Outlet } from '@remix-run/react'
 import Fallback from '@components/Fallback'
 import RootLayout from '@components/RootLayout'
 import { fetchChains } from '@services/chain'
+import { fetchLogos, fetchTokens } from '@services/token'
 
 import rootCss from './root.css?url'
 
@@ -11,7 +12,12 @@ export const links = () => {
 }
 
 export const clientLoader = async () => {
-  const chains = await fetchChains()
+  const [chains] = await Promise.all([
+    fetchChains(),
+    fetchLogos(),
+    fetchTokens(),
+  ])
+
   return json({ chains })
 }
 

@@ -1,8 +1,36 @@
 import Decimal from 'decimal.js'
 
-import { LOGOS, TOKENS } from '@constants/data'
+import { fetchJson } from '@utils'
 
 Decimal.set({ toExpNeg: -1000, toExpPos: 1000 })
+
+const logoCache: { logos: Map<string, Anything> } = { logos: new Map() }
+
+const tokenCache: { tokens: Map<string, Anything> } = { tokens: new Map() }
+
+export const fetchLogos = async () => {
+  if (logoCache && logoCache.logos && Object.keys(logoCache.logos).length > 0) {
+    return logoCache.logos
+  }
+
+  const data = await fetchJson('/data/logo.json')
+  logoCache.logos = new Map(Object.entries(data))
+  return logoCache.logos
+}
+
+export const fetchTokens = async () => {
+  if (
+    tokenCache &&
+    tokenCache.tokens &&
+    Object.keys(tokenCache.tokens).length > 0
+  ) {
+    return tokenCache.tokens
+  }
+
+  const data = await fetchJson('/data/token.json')
+  tokenCache.tokens = new Map(Object.entries(data))
+  return tokenCache.tokens
+}
 
 const formatIntPart = (s: string) => s.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 
@@ -16,12 +44,12 @@ const formatFraction = (intPart: string, fracPart: string) => {
 }
 
 export const formatToken = (denom: string, amount: string) => {
-  const { decimals, symbol } = TOKENS.get(denom) ?? {
+  const { decimals, symbol } = tokenCache.tokens.get(denom) ?? {
     decimals: 6,
     symbol: denom,
   }
 
-  const { logo } = LOGOS.get(symbol) ?? { logo: '' }
+  const { logo } = logoCache.logos.get(symbol) ?? { logo: '' }
 
   const num = new Decimal(amount).div(new Decimal(10).pow(decimals))
   let numString = num.toString()
