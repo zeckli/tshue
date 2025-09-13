@@ -17,7 +17,7 @@
     "paths": {
       "@assets/*": ["./app/assets/*"],
       "@components/*": ["./app/components/*"],
-      "@constants": ["./app/constants/index.ts"],
+      "@constants/*": ["./app/constants/*"],
       "@services/*": ["./app/services/*"],
       "@utils": ["./app/utils/index.ts"]
     },

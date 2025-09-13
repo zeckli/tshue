@@ -1,6 +1,6 @@
 import { StargateClient } from '@cosmjs/stargate'
 
-import { FETCHER_NUMS } from '@constants'
+import { FETCHER_NUMS } from '@constants/enum'
 import { encodeAddress } from '@utils'
 
 const fetchBalanceByRpc = async (endpoint: string, address: string) => {
