@@ -1,6 +1,6 @@
 import Decimal from 'decimal.js'
 
-import { LOGOS, TOKENS } from '@constants'
+import { LOGOS, TOKENS } from '@constants/data'
 
 Decimal.set({ toExpNeg: -1000, toExpPos: 1000 })
 

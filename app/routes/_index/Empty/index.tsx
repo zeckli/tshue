@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 
-import { DECO } from '@constants'
+import { DECO } from '@constants/deco'
 
 const Empty = () => {
   const baseCss = clsx('f-row-cc relative text-center')
